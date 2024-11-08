@@ -25,16 +25,16 @@ fun packPoolData(token0Address: slice, token1Address: slice, jettonLpWalletCode:
         .storeUint(10, 8)
         // STORAGE_REF_FEE (0.1% * FEE_DIVIDER)
         .storeUint(10, 8)
-        // STORAGE_TOKEN0_ADDRESS
+        // STORAGE_TOKEN_0_ADDRESS
         .storeSlice(token0Address)
-        // STORAGE_TOKEN1_ADDRESS
+        // STORAGE_TOKE_1_ADDRESS
         .storeSlice(token1Address)
         // STORAGE_TOTAL_SUPPLY_LP
         .storeCoins(0)
         .storeRef(beginCell()
-            // STORAGE_COLLECTED_TOKEN0_PROTOCOL_FEE
+            // STORAGE_COLLECTED_TOKEN_0_PROTOCOL_FEE
             .storeCoins(0)
-            // STORAGE_COLLECTED_TOKEN1_PROTOCOL_FEE
+            // STORAGE_COLLECTED_TOKEN_1_PROTOCOL_FEE
             .storeCoins(0)
             // STORAGE_PROTOCOL_FEE_ADDRESS
             .storeSlice(HOLE_ADDRESS)

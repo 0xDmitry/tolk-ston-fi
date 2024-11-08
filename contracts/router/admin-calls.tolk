@@ -95,13 +95,13 @@ fun handleAdminMessages(op: int, queryId: int, myBalance: int, msgValue: int, ms
         // Make sure at least one upgrade process is in progress.
         assert((endCode + endAdmin) > 0, INVALID_CALL);
 
-        if ((endCode > 0) & (now() >= endCode)) {
+        if ((endCode > 0) && (now() >= endCode)) {
             setContractCodePostponed(newCode);
             endCode = 0;
             newCode = emptyCell();
         }
 
-        if ((endAdmin > 0) & (now() >= endAdmin)) {
+        if ((endAdmin > 0) && (now() >= endAdmin)) {
             STORAGE_ADMIN_ADDRESS = newAdmin;
             endAdmin = 0;
             newAdmin = HOLE_ADDRESS;

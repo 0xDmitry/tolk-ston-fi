@@ -2,6 +2,7 @@ tolk 0.6
 
 import "router/admin-calls.tolk"
 import "router/errors.tolk"
+import "router/get.tolk"
 import "router/getter.tolk"
 import "router/op.tolk"
 import "router/params.tolk"
@@ -100,7 +101,7 @@ fun onInternalMessage(myBalance: int, msgValue: int, msgFull: cell, msgBody: sli
         forceChain(WORKCHAIN, tokenWallet1, WRONG_WORKCHAIN);
 
         // Check if the call is valid.
-        if ((fwdFee * 6 > msgValue) | isSliceBitsEqual(senderAddress, tokenWallet1) | STORAGE_IS_LOCKED) {
+        if ((fwdFee * 6 > msgValue) || isSliceBitsEqual(senderAddress, tokenWallet1) || (STORAGE_IS_LOCKED == 1)) {
             // Refund jettons.
             var body = createSimpleTransferBody(queryId, 0, jettonAmount, fromUser);
             if (STORAGE_IS_LOCKED) {
@@ -130,7 +131,7 @@ fun onInternalMessage(myBalance: int, msgValue: int, msgFull: cell, msgBody: sli
                     // Real caller.
                     .storeSlice(fromUser);
                 
-                if (hasRef) {
+                if (hasRef == 1) {
                     val refAddress = refDs.loadAddress();
                     bodyRef = bodyRef.storeSlice(refAddress);
                 }
