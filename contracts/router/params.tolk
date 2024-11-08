@@ -1,0 +1,20 @@
+tolk 0.6
+
+const WORKCHAIN = 0;
+const REQUIRED_TON_RESERVE = 100000;
+const REQUIRED_FEES_WITHDRAW = 10;
+const REQUIRED_MIN_TON_PAY_TO = 30000000;
+const BASE_FEE = 10000;
+// 50000000 * 4
+const MIN_TON_REQUIRED_FOR_FEES_COLLECTOR = 200000000;
+// 24 * 60 * 60 * 2
+const TWO_DAYS = 172800;
+// 24 * 60 * 60 * 7
+const SEVEN_DAYS = 604800;
+
+const HOLE_ADDRESS = "EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9c"a;
+const BASE_URI = "https://lp.ston.fi/"u;
+
+@pure
+fun emptyCell(): cell
+    asm "<b b> PUSHREF";
