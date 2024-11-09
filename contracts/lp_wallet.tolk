@@ -1,6 +1,7 @@
 tolk 0.6
 
 import "lp_wallet/errors.tolk"
+import "lp_wallet/get.tolk"
 import "lp_wallet/jetton-utils.tolk"
 import "lp_wallet/op.tolk"
 import "lp_wallet/params.tolk"
@@ -174,8 +175,4 @@ fun onInternalMessage(myBalance: int, msgValue: int, msgFull: cell, msgBody: sli
     }
 
     throw WRONG_OP;
-}
-
-get getWalletData(): (int, slice, slice, cell) { 
-  return loadStorage();
 }

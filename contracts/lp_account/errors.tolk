@@ -1,0 +1,9 @@
+tolk 0.6
+
+const NO_LIQUIDITY = 80;
+const ZERO_OUTPUT = 81;
+const INVALID_CALLER = 82;
+const INSUFFICIENT_GAS = 83;
+const WRONG_WORKCHAIN = 85;
+
+const WRONG_OP = 0xffff;
