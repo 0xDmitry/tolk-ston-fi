@@ -14,10 +14,10 @@ fun handlePoolMessages(op: int, queryId: int, myBalance: int, msgValue: int, msg
         val newAmount1 = msgBody.loadCoins();
         val minLpOut = msgBody.loadCoins();
 
-        STORAGE_AMOUNT_0 += new_amount0;
-        STORAGE_AMOUNT_1 += new_amount1;
+        STORAGE_AMOUNT_0 += newAmount0;
+        STORAGE_AMOUNT_1 += newAmount1;
 
-        if (minLpOut && ((STORAGE_AMOUNT_0 > 1000) && (STORAGE_AMOUNT_1 > 1000))){
+        if (minLpOut && ((STORAGE_AMOUNT_0 > 1000) && (STORAGE_AMOUNT_1 > 1000))) {
             val msg = beginCell()
                 .storeUint(OP_CB_ADD_LIQUIDITY, 32)
                 .storeUint(queryId, 64)

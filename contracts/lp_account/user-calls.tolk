@@ -2,6 +2,7 @@ tolk 0.6
 
 import "errors.tolk"
 import "op.tolk"
+import "params.tolk"
 import "storage.tolk"
 import "../common/messages.tolk"
 
@@ -49,7 +50,7 @@ fun handleUserMessages(op: int, queryId: int, myBalance: int, msgValue: int, msg
     }
 
     if (op == OP_RESET_GAS) { 
-        assert(INSUFFICIENT_GAS, my_balance > REQUIRED_TON_RESERVE);
+        assert(INSUFFICIENT_GAS, myBalance > REQUIRED_TON_RESERVE);
         sendEmptyMessage(myBalance - REQUIRED_TON_RESERVE, STORAGE_USER_ADDRESS, NORMAL);
         return;
     }
