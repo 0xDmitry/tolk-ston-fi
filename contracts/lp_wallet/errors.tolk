@@ -1,0 +1,5 @@
+tolk 0.6
+
+const WRONG_WORKCHAIN = 85;
+
+const WRONG_OP = 0xffff;

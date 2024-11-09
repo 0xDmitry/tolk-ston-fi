@@ -1,0 +1,6 @@
+tolk 0.6
+
+const WORKCHAIN = 0;
+
+const REQUIRED_TON_STORAGE = 10000000;
+const REQUIRED_GAS = 10000000;

@@ -1,0 +1,8 @@
+tolk 0.6
+
+const OP_TRANSFER = 0xf8a7ea5;
+const OP_TRANSFER_NOTIFICATION = 0x7362d09c;
+const OP_INTERNAL_TRANSFER = 0x178d4519;
+const OP_EXCESSES = 0xd53276db;
+const OP_BURN = 0x595f07bc;
+const OP_BURN_NOTIFICATION = 0x7bdd97de;
